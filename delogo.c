@@ -140,6 +140,7 @@ usage( char *pgmname )
   }
   long_len++;
   op = long_options;
+  printf( "%s v%s - %s\n", TITLE, VERSION, AUTHOR );
   printf( "Usage: %s [options] video_file\n",
       pgmname );
   while( op->name )

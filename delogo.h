@@ -1,6 +1,10 @@
 #ifndef TRANSCODE_H
 #define TRANSCODE_H
 
+#define TITLE   "Delogo: Find the Logo Position and Size in a Video Stream"
+#define AUTHOR  "Zelea"
+#define VERSION "1.0"
+
 #define NOEDGE 255
 #define POSSIBLE_EDGE 128
 #define EDGE 0
