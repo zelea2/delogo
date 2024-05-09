@@ -1,4 +1,10 @@
 # delogo
+This program automates the detection of logos in video streams. It will create a PNG image of the logo and print the position and size in the video stream.
+The logo removal is done by passing these parameters to the <b>ffmpeg</b>. 
+
+The detection algorithm starts by getting equally spaced timestamps of the input video file (64 by default). Then from those timestamps it searches the first key frames and saves the Y plane of those frames (for YUV 4:2:0 and 4:2:2 encodings). To speed detection only the 4 corners of an image are saved while the middle bands are discarded. The percentage of these corners are configurable with switch options.
+To find the logo position all the saved frames are cross-correlated and the constant pixels will emerge. For static videos sometimes the detection fails and then it is better to apply first and edge detection algorithm (Canny) and cross-correlate the edges.
+
 Video Delogo: Find the Logo Position and Size in a Video Stream v1.0 - Zelea
 
 Usage: delogo [options] video_file
